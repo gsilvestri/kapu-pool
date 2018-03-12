@@ -1,0 +1,54 @@
+{
+    "transactions": [
+        {
+            "amount": 0.82775412,
+            "destination": "ZH47F2edH3gLVtTgavQm9jmM8QTdmBpeCW"
+        },
+        {
+            "amount": 1.80051947,
+            "destination": "ZH47F2edH3gLVtTgavQm9jmM8QTdmBpeCW"
+        },
+        {
+            "amount": 2.98940927,
+            "destination": "ZH47F2edH3gLVtTgavQm9jmM8QTdmBpeCW"
+        },
+        {
+            "amount": 3.26582818,
+            "destination": "ZH47F2edH3gLVtTgavQm9jmM8QTdmBpeCW"
+        },
+        {
+            "amount": 16.9482247,
+            "destination": "ZH47F2edH3gLVtTgavQm9jmM8QTdmBpeCW"
+        },
+        {
+            "amount": 30.4978901,
+            "destination": "ZH47F2edH3gLVtTgavQm9jmM8QTdmBpeCW"
+        },
+        {
+            "amount": 74.9729196,
+            "destination": "ZH47F2edH3gLVtTgavQm9jmM8QTdmBpeCW"
+        },
+        {
+            "amount": 113.417347,
+            "destination": "ZH47F2edH3gLVtTgavQm9jmM8QTdmBpeCW"
+        },
+        {
+            "amount": 149.749606,
+            "destination": "ZH47F2edH3gLVtTgavQm9jmM8QTdmBpeCW"
+        },
+        {
+            "amount": 152.148148,
+            "destination": "ZH47F2edH3gLVtTgavQm9jmM8QTdmBpeCW"
+        },
+        {
+            "amount": 1497.18073,
+            "destination": "ZH47F2edH3gLVtTgavQm9jmM8QTdmBpeCW"
+        }
+    ],
+    "donations": [
+        {
+            "amount": 51.1,
+            "destination": "ZH47F2edH3gLVtTgavQm9jmM8QTdmBpeCW"
+        }
+    ]
+}

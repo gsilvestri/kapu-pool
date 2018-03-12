@@ -1,0 +1,35 @@
+{
+  "name": "kapu-pool",
+  "version": "1.0.0",
+  "description": "KAPU sharing pool",
+  "main": "payments.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "kapujs": "^0.2.3",
+    "kapuwrapper": "^0.1.2",
+    "request": "^2.83.0",
+    "winston": "^2.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node payments.js",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gsilvestri/kapu-pool.git"
+  },
+  "keywords": [
+    "kapu-pool",
+    "sharing"
+  ],
+  "author": "Giovanni Silvestri <gsit80@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gsilvestri/kapu-pool/issues"
+  },
+  "homepage": "https://github.com/gsilvestri/kapu-pool#readme"
+}
