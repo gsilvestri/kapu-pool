@@ -66,4 +66,3 @@ The script is also runnable by cron using the -y argument:
 `python3 liskpool.py -y`
 
 There is also a 'batch.sh' file which run liskpool, then payments.sh and copy the poollogs.json
-in the docs folder.
