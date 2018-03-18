@@ -6,7 +6,7 @@ var payments = require('./paymentsMainNET2');
 var logger = require('winston');
 logger.level = 'info';
 
-const ENDPOINT = constants.MAIN_NET_ENDPOINT;//constants.DEV_NET_ENDPOINT;//
+const ENDPOINT = constants.DEV_NET_ENDPOINT;//constants.MAIN_NET_ENDPOINT;//
 const SEND = true;
 
 var callback = function (error, response, body) {

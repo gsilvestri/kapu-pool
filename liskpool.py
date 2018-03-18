@@ -95,7 +95,8 @@ def pool ():
 		print ('Nothing to distribute, exiting...')
 		return
 		
-	f = open ('payments.sh', 'w')
+	f = open ('payments.json', 'w')
+	f.write('{\"transactions\": [\n')
 	for x in topay:
 		if not (x['address'] in log['accounts']) and x['balance'] != 0.0:
 			log['accounts'][x['address']] = { 'pending': 0.0, 'received': 0.0 }
@@ -103,58 +104,38 @@ def pool ():
 		if x['balance'] < conf['minpayout'] and x['balance'] > 0.0:
 			log['accounts'][x['address']]['pending'] += x['balance']
 			continue
-			
 		log['accounts'][x['address']]['received'] += x['balance']	
-		
-		f.write ('echo Sending ' + str (x['balance']) + ' to ' + x['address'] + '\n')
-		
 		data = { "secret": conf['secret'], "amount": int (x['balance'] * 100000000), "recipientId": x['address'] }
 		if conf['secondsecret'] != None:
-			data['secondSecret'] = conf['secondsecret']
-		
-		f.write ('curl -k -H  "Content-Type: application/json" -X PUT -d \'' + json.dumps (data) + '\' ' + conf['nodepay'] + "/peer/transactions\n\n")
-		f.write ('sleep 3\n')
-			
+			data['secondSecret'] = conf['secondsecret']		
+		f.write (json.dumps (data) + ',\n')
+	f.write('],\n \"transactionsPending\": [\n')
 	for y in log['accounts']:
 		if log['accounts'][y]['pending'] > conf['minpayout']:
-			f.write ('echo Sending pending ' + str (log['accounts'][y]['pending']) + ' to ' + y + '\n')
-			
-			
 			data = { "secret": conf['secret'], "amount": int (log['accounts'][y]['pending'] * 100000000), "recipientId": y }
 			if conf['secondsecret'] != None:
-				data['secondSecret'] = conf['secondsecret']
-			
-			f.write ('curl -k -H  "Content-Type: application/json" -X PUT -d \'' + json.dumps (data) + '\' ' + conf['nodepay'] + "/peer/transactions\n\n")
+				data['secondSecret'] = conf['secondsecret']			
+			f.write (json.dumps (data) + ',\n')
 			log['accounts'][y]['received'] += log['accounts'][y]['pending']
 			log['accounts'][y]['pending'] = 0.0
-			f.write ('sleep 3\n')
-			
+	f.write('],\n \"donations\": [\n');		
 	# Donations
 	if 'donations' in conf:
 		for y in conf['donations']:
-			f.write ('echo Sending donation ' + str (conf['donations'][y]) + ' to ' + y + '\n')
-				
 			data = { "secret": conf['secret'], "amount": int (conf['donations'][y] * 100000000), "recipientId": y }
 			if conf['secondsecret'] != None:
-				data['secondSecret'] = conf['secondsecret']
-			
-			f.write ('curl -k -H  "Content-Type: application/json" -X PUT -d \'' + json.dumps (data) + '\' ' + conf['nodepay'] + "/peer/transactions\n\n")
-			f.write ('sleep 3\n')
-
+				data['secondSecret'] = conf['secondsecret']			
+			f.write (json.dumps (data) + ',\n')
+	f.write('],\n \"donationsPercentage\": [\n');		
 	# Donation percentage
 	if 'donationspercentage' in conf:
 		for y in conf['donationspercentage']:
 			am = (forged * conf['donationspercentage'][y]) / 100
-			
-			f.write ('echo Sending donation ' + str (conf['donationspercentage'][y]) + '% \(' + str (am) + 'KAPU\) to ' + y + '\n')
-				
 			data = { "secret": conf['secret'], "amount": int (am * 100000000), "recipientId": y }
 			if conf['secondsecret'] != None:
-				data['secondSecret'] = conf['secondsecret']
-			
-			f.write ('curl -k -H  "Content-Type: application/json" -X PUT -d \'' + json.dumps (data) + '\' ' + conf['nodepay'] + "/peer/transactions\n\n")
-			f.write ('sleep 3\n')
-
+				data['secondSecret'] = conf['secondsecret']			
+			f.write (json.dumps (data) + ',\n')
+	f.write(']\n}\n')
 	f.close ()
 	
 	log['lastpayout'] = int (time.time ())
