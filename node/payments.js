@@ -2,11 +2,11 @@ var kapu = require('kapujs');
 var request = require('request');
 var phassphrases = require('./passphrases');
 var constants = require('./constants');
-var payments = require('./paymentsMainNET2');
+var payments = require('../payments');
 var logger = require('winston');
 logger.level = 'info';
 
-const ENDPOINT = constants.DEV_NET_ENDPOINT;//constants.MAIN_NET_ENDPOINT;//
+const ENDPOINT = constants.MAIN_NET_ENDPOINT;//constants.DEV_NET_ENDPOINT;//
 const SEND = true;
 
 var callback = function (error, response, body) {
@@ -24,6 +24,7 @@ if (ENDPOINT === constants.DEV_NET_ENDPOINT) {
     nethashExpected = constants.DEV_NET_NETHASH;
     passphrase = phassphrases.PASSPHRASE_DEVNET;
     secondPassphrase = phassphrases.SECOND_PASSPHRASE_DEVNET;
+    logger.level = 'debug';
 }
 logger.info('API endpoint: %s', ENDPOINT);
 if (payments !== null) {
@@ -50,28 +51,38 @@ if (payments !== null) {
             */
             var transactionsObject = payments.transactions;
             //logger.debug("Transactions: " + JSON.stringify(transactionsObject));
+            var transactionsPendingObject = payments.transactionsPending;
             var donationsObject = payments.donations;
             //logger.debug("Donations: " + JSON.stringify(donationsObject));
+            var donationsPercentageObject = payments.donationsPercentage;
             var transactionsRequest = {};
             var transactionsRequestKey = 'transactions';
             transactionsRequest[transactionsRequestKey] = [];
+            //Send Transactions Pending
             for (var key in transactionsObject) {
-                if (transactionsObject[key].destination && transactionsObject[key].amount) {
-                    //logger.debug("Key: %s Value: %s %s", key, transactionsObject[key].destination, transactionsObject[key].amount);
-                    //var amount = (transactionsObject[key].amount).toFixed(constants.PRECISION) * Math.pow(10, 8); // 100000000000
-                    var amount = constants.roundDown(transactionsObject[key].amount, constants.PRECISION) * Math.pow(10, 8);
-                    var transaction = kapu.transaction.createTransaction(transactionsObject[key].destination, amount, constants.MESSAGE_1, passphrase, secondPassphrase);
-                    //logger.debug(transaction);
+                if (transactionsObject[key].recipientId && transactionsObject[key].amount) {
+                    var transaction = kapu.transaction.createTransaction(transactionsObject[key].recipientId, transactionsObject[key].amount, constants.MESSAGE_1, passphrase, secondPassphrase);
                     transactionsRequest[transactionsRequestKey].push(transaction);
                 }
             }
+            //Send Transactions Pending
+            for (var key in transactionsPendingObject) {
+                if (transactionsPendingObject[key].recipientId && transactionsPendingObject[key].amount) {
+                    var transaction = kapu.transaction.createTransaction(transactionsPendingObject[key].recipientId, transactionsPendingObject[key].amount, constants.MESSAGE_1, passphrase, secondPassphrase);
+                    transactionsRequest[transactionsRequestKey].push(transaction);
+                }
+            }
+            //Send Donations
             for (var key in donationsObject) {
-                if (donationsObject[key].destination && donationsObject[key].amount) {
-                    //logger.debug("Key: %s Value: %s %s", key, donationsObject[key].destination, donationsObject[key].amount);
-                    //var amount = (donationsObject[key].amount).toFixed(constants.PRECISION) * Math.pow(10, 8); // 100000000000
-                    var amount = constants.roundDown(donationsObject[key].amount, constants.PRECISION) * Math.pow(10, 8);
-                    var transaction = kapu.transaction.createTransaction(donationsObject[key].destination, amount, constants.MESSAGE_2, passphrase, secondPassphrase);
-                    //logger.debug(transaction);
+                if (donationsObject[key].recipientId && donationsObject[key].amount) {
+                    var transaction = kapu.transaction.createTransaction(donationsObject[key].recipientId, donationsObject[key].amount, constants.MESSAGE_2, passphrase, secondPassphrase);
+                    transactionsRequest[transactionsRequestKey].push(transaction);
+                }
+            }
+            //Send Donations Percentage
+            for (var key in donationsPercentageObject) {
+                if (donationsPercentageObject[key].recipientId && donationsPercentageObject[key].amount) {
+                    var transaction = kapu.transaction.createTransaction(donationsPercentageObject[key].recipientId, donationsPercentageObject[key].amount, constants.MESSAGE_2, passphrase, secondPassphrase);
                     transactionsRequest[transactionsRequestKey].push(transaction);
                 }
             }
