@@ -1,11 +1,11 @@
 {
     "pending": {},
-    "lastforged": 9101800000000,
-    "lastpayout": 1524953934,
+    "lastforged": 9424200000000,
+    "lastpayout": 1525614295,
     "accounts": {
         "KViFSsTzbszDcaJ1CVr5F7XwqMnBMFmw4q": {
             "pending": 0.0,
-            "received": 49480.33360212986
+            "received": 51058.26210238706
         },
         "KAEoaDxCWAUSaCFeZuixXG8dFxe2RT7Lyk": {
             "pending": 0.14191828653852448,
@@ -13,7 +13,7 @@
         },
         "KLgncoamZ8wyLK6SVy51mLb9wGmyWfVLP1": {
             "pending": 0.0,
-            "received": 513.3419278216987
+            "received": 531.2024428066464
         },
         "KK51uNCdhKH2vqXkaZ1vDrhdfqXsrZFhA6": {
             "pending": 0.0,
@@ -37,26 +37,26 @@
         },
         "KBTqDz2Uz3CbgkBtQ1eXCgtq8ANdWTmCiJ": {
             "pending": 0.0,
-            "received": 2162.3586271532918
+            "received": 2281.880955676436
         },
         "KNnwe4nsCvxEQ45TcSRAAQyNcjg7qoJAJj": {
             "pending": 0.0,
-            "received": 19.627900006668366
+            "received": 20.500207078798002
         },
         "KPr9FEfdAEqvxZCZ7JYs6BSu4yiTedkCBH": {
             "pending": 0.0,
-            "received": 723.1740871175753
+            "received": 755.3136428109486
         },
         "KGg1nGgqqbLyoPkvkvE2NySYRRo35sZ1Bf": {
             "pending": 0.1925272242008651,
-            "received": 1007.2876096739399
+            "received": 1052.968266196817
         },
         "KS8Uaht7qC5tby5hEysFt3wycYVzYcsv4S": {
             "pending": 0.0,
-            "received": 3445.0689504954785
+            "received": 3605.407148560906
         },
         "K8McNcgSqtb7V6ccZfcEmyBFLzXvyQs12Q": {
-            "pending": 0.0,
+            "pending": 0.08506214101562905,
             "received": 1.1521222740526482
         },
         "KCWHHuZkUqE6jy1Kobi36YCviixhr4QJbr": {
@@ -64,8 +64,8 @@
             "received": 18.599061352604377
         },
         "KVSGdmZEzWUzZ98DLNGVd3W7WxRS1Ncc9t": {
-            "pending": 0.19791218310481082,
-            "received": 0.20502810660193854
+            "pending": 0.0,
+            "received": 0.434114882858467
         },
         "KLGFsHGXd9PwjMmCyrJX2KYCqQ4Z7kRCFN": {
             "pending": 0.0,
@@ -73,35 +73,35 @@
         },
         "KRqCcuYke3bPnT9W8MR1f8WF88RCNnvaS9": {
             "pending": 0.0,
-            "received": 942.2863598143296
+            "received": 1021.2942779194439
         },
         "KNfWPzrH3VUmXsrFjx4JZCq6f2BiPUmaHe": {
             "pending": 0.0,
-            "received": 1750.2397393425028
+            "received": 1908.0487872124277
         },
         "KMEXoRv9KEr1YVFSjdFS6LPBdg7ubjaW5B": {
             "pending": 0.0,
-            "received": 32.19157645317413
+            "received": 35.34189266218627
         },
         "KHZRpqqdH5KLg2h5BJD3puX2fB6CJgoQhx": {
             "pending": 0.0,
-            "received": 145.85142721162427
+            "received": 161.5858248246776
         },
         "KShNsSi3kyE3tfFqVyAmndBg8VJeXc7jWw": {
             "pending": 0.0,
-            "received": 20.573085715191105
+            "received": 23.049324609809155
         },
         "K8voBVnSTFw6qrgyj9h65SJoESNJJFEuKU": {
             "pending": 0.0,
-            "received": 149.29964127385745
+            "received": 169.64633585210228
         },
         "KPtmKCig63h9cKeZSxrKLNWQeCL947GGXa": {
             "pending": 0.0,
-            "received": 151.55202873906083
+            "received": 165.5525948215554
         },
         "KBRWc7dUh6FiiaDtSfjURLttzAnYGL6QFa": {
             "pending": 0.0,
-            "received": 53.25232495176686
+            "received": 63.06884774603934
         }
     }
 }
