@@ -114,7 +114,7 @@ def pool ():
 		f.write (json.dumps (data))
 		index += 1
 	index = 0
-	f.write('\n],\n \"transactionsPending\": [\n')
+	f.write('],\n \"transactionsPending\": [\n')
 	for y in log['accounts']:
 		if log['accounts'][y]['pending'] > conf['minpayout']:
 			data = { "secret": conf['secret'], "amount": int (log['accounts'][y]['pending'] * 100000000), "recipientId": y }
@@ -126,7 +126,7 @@ def pool ():
 			index += 1
 			log['accounts'][y]['received'] += log['accounts'][y]['pending']
 			log['accounts'][y]['pending'] = 0.0
-	f.write('\n],\n \"donations\": [\n');		
+	f.write('],\n \"donations\": [\n');		
 	# Donations
 	index = 0
 	if 'donations' in conf:
@@ -138,7 +138,7 @@ def pool ():
 			if index < (len (conf['donations']) - 1):
 				f.write (',\n')
 			index += 1
-	f.write('\n],\n \"donationsPercentage\": [\n');		
+	f.write('],\n \"donationsPercentage\": [\n');		
 	# Donation percentage
 	index = 0
 	if 'donationspercentage' in conf:
@@ -151,7 +151,7 @@ def pool ():
 			if index < (len (conf['donationspercentage']) - 1):
 				f.write (',\n')
 			index += 1
-	f.write('\n]\n}\n')
+	f.write(']\n}\n')
 	f.close ()
 	
 	log['lastpayout'] = int (time.time ())

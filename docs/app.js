@@ -18,7 +18,7 @@ app.controller('indexCtrl', function($scope, $http) {
         }
     });
 
-    $http.get ('https://walletapi.kapu.one/api/delegates/get?username=gsilvestri').then (function (res) {
+    $http.get ('https://api.kapunode.net/api/delegates/get?username=kapu_crypt').then (function (res) {
         $scope.delegate = res.data.delegate;
     });
 });
