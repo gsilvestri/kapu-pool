@@ -1,5 +1,6 @@
 {"transactions": [
-{"secret": "", "amount": 788310000000, "recipientId": "KMLFFymTTZtryGZHsCMD5GYuBjSzEZW8wB", "secondSecret": ""}],
+{"secret": "", "amount": 183437475294, "recipientId": "KMLFFymTTZtryGZHsCMD5GYuBjSzEZW8wB", "secondSecret": ""},
+{"secret": "", "amount": 88072524705, "recipientId": "KBTqDz2Uz3CbgkBtQ1eXCgtq8ANdWTmCiJ", "secondSecret": ""}],
  "transactionsPending": [
 ],
  "donations": [

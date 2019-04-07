@@ -9,7 +9,7 @@ const HEADER_OS = 'kapu-pool';
 const HEADER_PORT = 9702;
 const HEADER_VERSION = '2.0.17'; //require('./package.json').version;
 const PRECISION = 8;
-const MESSAGE_1 = 'pool sharing - 95%: thank You for your vote';
+const MESSAGE_1 = 'pool sharing - 95%: www.cryptdelegate.com';
 const MESSAGE_2 = 'pool sharing: KCH';
 
 module.exports = {
