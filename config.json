@@ -3,7 +3,7 @@
 	"node": "https://api.kapunode.net",
 	"nodepay": "https://api.kapunode.net",
 	"pubkey": "03f6463bd50356b765cfb4903fee7497cc6d3e099c294f4c60aad82ee9b28d81fb",
-	"percentage": 95,
+	"percentage": 90,
 	"logfile": "poollogs.json",
 	"minpayout": 0.2,
 	"secret": "",
