@@ -1,11 +1,23 @@
-{"transactions": [
-{"secret": "", "amount": 167745041543, "recipientId": "KMLFFymTTZtryGZHsCMD5GYuBjSzEZW8wB", "secondSecret": ""},
-{"secret": "", "amount": 80487426723, "recipientId": "KBTqDz2Uz3CbgkBtQ1eXCgtq8ANdWTmCiJ", "secondSecret": ""},
-{"secret": "", "amount": 15287531733, "recipientId": "K8r6RtjoBKqfLF4oWQBdDf33DsD83Y3syw", "secondSecret": ""}],
- "transactionsPending": [
-],
- "donations": [
-],
- "donationsPercentage": [
-]
+{
+    "transactions": [
+        {
+            "recipientId": "KMLFFymTTZtryGZHsCMD5GYuBjSzEZW8wB",
+            "amount": 155230889532
+        },
+        {
+            "recipientId": "KBTqDz2Uz3CbgkBtQ1eXCgtq8ANdWTmCiJ",
+            "amount": 74408999677
+        },
+        {
+            "recipientId": "K8r6RtjoBKqfLF4oWQBdDf33DsD83Y3syw",
+            "amount": 14133014187
+        },
+        {
+            "recipientId": "KFjkayaDf4KnSgXHFQbTaHZwsEoo1CMNPi",
+            "amount": 23707096603
+        }
+    ],
+    "transactionsPending": [],
+    "donations": [],
+    "donationsPercentage": []
 }
