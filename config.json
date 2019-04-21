@@ -1,15 +1,23 @@
 {
 	"coin": "KAPU",
 	"node": "https://api.kapunode.net",
-	"nodepay": "https://api.kapunode.net",
+	"MAIN_NET_NETHASH": "a28cfbd5475471d9c23186976b17a482138de2c6edfc7daf0919a159d2c524e6",
 	"pubkey": "03f6463bd50356b765cfb4903fee7497cc6d3e099c294f4c60aad82ee9b28d81fb",
 	"percentage": 90,
-	"logfile": "poollogs.json",
+	"logfile": "docs/poollogs.json",
+	"paymentsFile": "payments.json",
 	"minpayout": 0.2,
-	"secret": "",
+	"secret": "passphrases.json",
 	"secondsecret": "",
 	"donations": {},
 	"donationspercentage": {
 	},
-	"skip": []
+	"skip": [],
+	"GET_NET_HASH_ENDPOINT": "/api/blocks/getNethash",
+	"TRANSACTIONS_ENDPOINT": "/api/v2/transactions",
+	"HEADER_CONTENT_TYPE": "application/json",
+	"HEADER_OS": "kapu-pool",
+	"HEADER_PORT": 9702,
+	"MESSAGE_1": "pool sharing - 90%: www.cryptdelegate.com",
+	"MESSAGE_2": "pool sharing: RCF"
 }

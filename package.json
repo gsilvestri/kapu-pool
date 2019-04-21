@@ -11,11 +11,13 @@
     "kapujs": "^0.2.3",
     "kapuwrapper": "^0.1.2",
     "request": "^2.83.0",
-    "winston": "^2.4.0"
+    "request-promise": "^4.2.0",
+    "winston": "^2.4.0",
+    "readline-sync": "^1.4.9"
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node payments.js",
+    "start": "node liskpool.js",
     "test": "test"
   },
   "repository": {
@@ -23,7 +25,7 @@
     "url": "git+https://github.com/gsilvestri/kapu-pool.git"
   },
   "keywords": [
-    "kapu-pool",
+    "ripa-pool",
     "sharing"
   ],
   "author": "Giovanni Silvestri <gsit80@gmail.com>",
