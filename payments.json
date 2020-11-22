@@ -2,31 +2,31 @@
     "transactions": [
         {
             "recipientId": "K7NaofCDp4pSDR5hXRjuGVeyaVeqb9qs2B",
-            "amount": 156485666
+            "amount": 158249236
         },
         {
             "recipientId": "KMLFFymTTZtryGZHsCMD5GYuBjSzEZW8wB",
-            "amount": 61423216403
+            "amount": 62150987657
         },
         {
             "recipientId": "KFjkayaDf4KnSgXHFQbTaHZwsEoo1CMNPi",
-            "amount": 8880911868
+            "amount": 8980998428
         },
         {
             "recipientId": "KKG8zY6Ya8QJkZXykVoRpEG5bui3noAEZe",
-            "amount": 89981429553
+            "amount": 90995506926
         },
         {
             "recipientId": "K8r6RtjoBKqfLF4oWQBdDf33DsD83Y3syw",
-            "amount": 5294366304
+            "amount": 5354033027
         },
         {
             "recipientId": "KBTqDz2Uz3CbgkBtQ1eXCgtq8ANdWTmCiJ",
-            "amount": 27874344100
+            "amount": 28188483826
         },
         {
             "recipientId": "KLBKDKjqzbP43Ekfz7PykBQMXkhwgDZLjA",
-            "amount": 10869246103
+            "amount": 10991740896
         }
     ],
     "transactionsPending": [],
